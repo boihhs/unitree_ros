@@ -8,6 +8,40 @@
         </plugin>
     </gazebo>
 
+    <gazebo>
+        <plugin name="p3d" filename="libgazebo_ros_p3d.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>100.0</updateRate>
+        <bodyName>base</bodyName>
+        <topicName>body_pose_ground_truth</topicName>
+        <frameName>world</frameName>
+        <xyzOffsets>0 0 0.0</xyzOffsets>
+        <rpyOffsets>0 0 0.0</rpyOffsets>
+        </plugin>
+    </gazebo>
+
+    <gazebo>
+        <plugin name="p3d" filename="libgazebo_ros_p3d.so">
+            <always_on>true</always_on>
+            <update_rate>200</update_rate>
+            <bodyName>base</bodyName>
+            <topicName>/torso_odom</topicName>
+            <frameName>world</frameName>
+            <xyzOffset>0 0 0</xyzOffset>
+            <rpyOffset>0 0 0</rpyOffset>
+        </plugin>
+    </gazebo>
+
+    <!-- Show the trajectory of trunk center. -->
+
+
+    <gazebo>
+        <plugin filename="libgazebo_ros_force.so" name="gazebo_ros_force">
+            <bodyName>trunk</bodyName>
+            <topicName>/apply_force/trunk</topicName>
+        </plugin>
+    </gazebo>
+
     <!-- Show the trajectory of trunk center. -->
     <gazebo>
         <plugin name="3dplot" filename="libLinkPlot3DPlugin.so">
