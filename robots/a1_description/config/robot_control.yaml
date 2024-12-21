@@ -67,4 +67,3 @@ a1_gazebo:
         type: unitree_legged_control/UnitreeJointController
         joint: RR_calf_joint
         pid: {p: 300.0, i: 0.0, d: 8.0}
-
