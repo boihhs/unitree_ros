@@ -11,6 +11,8 @@
     <xacro:include filename="$(find go1_description)/xacro/gazebo.xacro"/>
     <xacro:include filename="$(find go1_description)/xacro/depthCamera.xacro"/>
     <xacro:include filename="$(find go1_description)/xacro/ultraSound.xacro"/>
+    <!-- Include file for the robotic arm -->
+    <xacro:include filename="$(find wx250_description)/urdf/wx250.urdf.xacro" />
     <!-- <xacro:include filename="$(find go1_gazebo)/launch/stairs.urdf.xacro"/> -->
 
     <!-- <xacro:stairs stairs="15" xpos="0" ypos="0" zpos="0" /> -->
@@ -66,6 +68,16 @@
                 izz="${trunk_izz}"/>  
         </inertial>
     </link>
+
+    <!-- Add the robotic arm -->
+    <xacro:wx250_robot /> <!-- New addition -->
+
+    <!-- Attach the robotic arm to the trunk -->
+    <joint name="arm_to_trunk" type="fixed"> <!-- New addition -->
+        <parent link="trunk"/> <!-- Link to the quadruped's torso -->
+        <child link="arm_base_link"/> <!-- Base link of the arm -->
+        <origin xyz="0 0 0.3" rpy="0 0 0"/> <!-- Adjust position and orientation -->
+    </joint> <!-- New addition -->
 
     <joint name="imu_joint" type="fixed">
         <parent link="trunk"/>
