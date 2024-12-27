@@ -6,14 +6,14 @@ find_package(catkin REQUIRED COMPONENTS
     roscpp
     std_msgs
     tf
+    wx250_description
 )
 
 catkin_package(
-    CATKIN_DEPENDS
+    CATKIN_DEPENDS roscpp std_msgs wx250_description # Add wx250_description here
 )
 
 include_directories(
-    # include
     ${Boost_INCLUDE_DIR}
     ${catkin_INCLUDE_DIRS}
 )
