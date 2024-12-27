@@ -10,7 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 catkin_package(
-    CATKIN_DEPENDS roscpp std_msgs wx250_description # Add wx250_description here
+    CATKIN_DEPENDS roscpp std_msgs wx250_description
 )
 
 include_directories(
