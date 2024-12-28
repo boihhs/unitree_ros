@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>interbotix_xsarm_descriptions</name>
+  <name>wx250_description</name>
   <version>0.0.0</version>
-  <description>The interbotix_xsarm_descriptions package</description>
+  <description>The wx250_description package</description>
   <maintainer email="trsupport@trossenrobotics.com">Solomon Wiznitzer</maintainer>
   <license>BSD</license>
   <!-- <url type="website">http://wiki.ros.org/interbotix_xsarm_descriptions</url> -->
