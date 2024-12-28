@@ -75,7 +75,7 @@
     <joint name="arm_to_trunk" type="fixed">
       <parent link="trunk"/> <!-- Parent link from the quadruped -->
       <child link="wx250/base_link"/> <!-- Base link of the arm -->
-      <origin xyz="0 0 0.3" rpy="0 0 0"/> <!-- Adjust position and orientation -->
+      <origin xyz="0 0 0.058" rpy="0 0 0"/> <!-- Adjust position and orientation -->
     </joint>
 
     <joint name="imu_joint" type="fixed">
