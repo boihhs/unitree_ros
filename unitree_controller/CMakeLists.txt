@@ -7,7 +7,7 @@ find_package(catkin REQUIRED COMPONENTS
     joint_state_controller
     robot_state_publisher
     roscpp
-    gazebo_ros
+    mujoco_ros
     std_msgs
     tf
     geometry_msgs
